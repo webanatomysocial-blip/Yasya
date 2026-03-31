@@ -1,0 +1,163 @@
+.counter-con {
+  width: 100%;
+  position: relative;
+  /* Blend a red overlay over the background image */
+  background: linear-gradient(rgba(181, 27, 32, 0.88), rgba(181, 27, 32, 0.95)), url('../../assets/Home/Tab1.avif');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.counter-wrapper {
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Space between top and bottom rows */
+}
+
+/* ── TOP ROW ── */
+.counter-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 40px;
+}
+
+.counter-heading-box {
+  max-width: 800px;
+}
+
+.counter-subtitle {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.counter-title {
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.counter-arrow-box {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.counter-arrow-box img {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── BOTTOM ROW ── */
+.counter-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Align bottom text with bottom grid elements */
+  width: 100%;
+  gap: 40px;
+}
+
+.counter-desc-box {
+  width: 40%;
+  max-width: 380px;
+}
+
+.counter-desc {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.counter-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.counter-btn:hover {
+  background: #fff;
+  color: #b51b20;
+}
+
+.counter-grid-box {
+  width: 55%;
+}
+
+/* Internal grid for counters */
+.counter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.counter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+/* Horizontal inner border only */
+.counter-item:nth-child(1),
+.counter-item:nth-child(2) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.counter-label {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  max-width: 100px;
+  line-height: 1.3;
+}
+
+.counter-number {
+  color: #fff;
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .counter-top-row,
+  .counter-bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .counter-desc-box,
+  .counter-grid-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .counter-grid {
+    grid-template-columns: 1fr;
+  }
+  .counter-item:nth-child(3) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

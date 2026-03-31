@@ -1,0 +1,122 @@
+.core-founders-con {
+  width: 100%;
+  padding: 100px 80px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.core-founders-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ── TOP ROW ── */
+.core-founders-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 60px;
+}
+
+.core-founders-heading-box {
+  flex: 1;
+}
+
+.core-founders-subtitle-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.core-founders-square {
+  width: 12px;
+  height: 12px;
+  background-color: #003399; /* Blue square from screenshot */
+  display: inline-block;
+}
+
+.core-founders-heading-right {
+  flex: 1;
+  max-width: 450px;
+}
+
+.core-founders-heading-right .para-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ── GRID ── */
+.core-founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px; 
+}
+
+.core-founders-card {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Creating the continuous border look from screenshot */
+.core-founders-card:nth-child(1) { border-right: none; border-bottom: none; }
+.core-founders-card:nth-child(2) { border-bottom: none; }
+.core-founders-card:nth-child(3) { border-right: none; }
+
+.core-founders-card:hover {
+  background-color: #fafafa;
+}
+
+.core-founders-card-icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #b51b20; /* Red from design */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.core-founders-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.core-founders-card-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .core-founders-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .core-founders-con {
+    padding: 60px 40px;
+  }
+  .core-founders-grid {
+    grid-template-columns: 1fr;
+  }
+  .core-founders-card {
+    padding: 40px 30px;
+    border: 1px solid #e5e5e5 !important; 
+  }
+}

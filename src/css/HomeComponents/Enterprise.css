@@ -1,0 +1,157 @@
+.enterprise-con {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;  
+}
+
+.enterprise-headings-left {
+  width: 50%;
+}
+
+.enterprise-headings-right {
+  width: 50%;
+}
+
+/* ── Cards Grid ── */
+.enterprise-cards-con {
+  width: 100%;
+  padding: 0 100px 100px 100px; /* Aligned with .enterprise-con padding */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ── Outer Card Wrapper ── */
+.enterprise-card {
+  position: relative;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Magic trick: Anchors the inner-card to the bottom natively */
+  padding: 14px; /* Tiny gap to let the inner card float neatly inside */
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* ── Inner White Card ── */
+.enterprise-inner-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px 30px 30px 30px; /* High top padding to avoid overlapping with absolute icon */
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: all 0.3s ease-out;
+  
+  /* Strict unified height irrespective of dynamic text sizes */
+  height: 260px; /* Hard-locked default size */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Red Icon ── */
+.enterprise-icon {
+  position: absolute;
+  top: -24px; /* Sits perfectly halfway outside the inner-card */
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #b51b20;
+  border-radius: 8px; /* Slightly curved matching screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+.enterprise-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.enterprise-card-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  
+  /* Adds a smooth clamp so un-hovered cards have clean truncation */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  
+  /* Flushes the button strictly to the absolute bottom of the inner card */
+  flex-grow: 1; 
+}
+
+/* ── Hidden Button ── */
+.enterprise-card-btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  width: 175px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  /* Initial hidden state logic */
+  opacity: 0;
+  max-height: 0;
+  padding: 0 24px;
+  margin-top: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease-out;
+}
+
+/* ── BUTTER SMOOTH HOVER EFFECTS ── */
+
+/* 1. Show the button */
+.enterprise-card:hover .enterprise-card-btn {
+  opacity: 1;
+  max-height: 80px; 
+  padding: 12px 24px;
+  margin-top: 24px;
+  transform: translateY(0);
+}
+
+/* 2. Inner card natively expands upward strictly dictating its physical height */
+.enterprise-card:hover .enterprise-inner-card {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08); /* Pops slightly */
+  height: 330px; /* Directly enforces the unified vertical growth exactly matching button demands */
+}
+
+/* ── Responsive Behavior ── */
+@media (max-width: 1100px) {
+  .enterprise-cards-con {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 40px 100px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .enterprise-cards-con {
+    grid-template-columns: 1fr;
+    padding: 0 20px 80px 20px;
+  }
+  .enterprise-con {
+    flex-direction: column;
+    padding: 60px 20px;
+    align-items: flex-start;
+  }
+  .enterprise-headings-left,
+  .enterprise-headings-right {
+    width: 100%;
+  }
+}

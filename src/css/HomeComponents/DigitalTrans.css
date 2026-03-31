@@ -1,0 +1,139 @@
+.digital-con {
+  width: 100%;
+  background-color: #fff;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digital-con-headings {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.digital-head-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.digital-sub-text {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.digital-content-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Allows left and right columns to share max height so internal sticky items can travel */
+  width: 100%;
+  padding: 0px 80px;
+  gap: 60px;
+}
+
+/* ── Left Side Video ── */
+.digital-video-con {
+  width: 50%;
+}
+
+.video-sticky-wrapper {
+  position: sticky;
+  top: 20vh; /* Stops scrolling exactly here */
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  /* user removed box-shadow */
+}
+
+.digital-video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px; /* explicitly add radius to video ensuring bottom curve */
+}
+
+/* ── Right Side Cards ── */
+.digital-cards-con {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  top: 20vh;
+  gap: 0px; /* Reduced gap - Multiple cards appear on screen together natively, then smoothly slide over each other as scroll reaches sticky point */
+  padding-bottom: 45vh; /* Massively increased bottom padding to ensure the exact container height needed for the final card to complete its stacking sequence and remain pinned before scrolling off */
+}
+
+/* Base Card Styling */
+.digital-card {
+  position: sticky; /* Cards scroll up to their computed top value, then stick */
+  background: #fff;
+  padding:0px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  min-height: 180px; /* Reduced but enough to eclipse others */
+}
+
+
+.num {
+  background-color: #B51B20;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px; /* Rounded square, matching design */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.digital-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.card-desc {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .digital-content-con {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .digital-video-con, .digital-cards-con {
+    width: 100%;
+  }
+  .video-sticky-wrapper, .digital-card {
+    position: relative; /* Disable sticky stacking on mobile to avoid overlapping issues */
+    top: 0 !important;
+  }
+  .hide-mobile {
+    display: none;
+  }
+}

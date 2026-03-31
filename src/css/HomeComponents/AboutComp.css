@@ -1,0 +1,185 @@
+/* ── Layout ── */
+.home-about-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 100px 100px;
+    gap: 60px;
+}
+
+.home-about-left-con {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-about-buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+/* ── Right-side Image Panel ── */
+.home-about-right-con {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: relative; /* containing block for absolute children */
+    min-height: 460px;
+}
+
+.about-image-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    z-index: 1;
+    pointer-events: none; /* prevent invisible ones from blocking clicks */
+}
+
+/* The active one becomes relative to push the container's height naturally */
+.about-image-wrap.active-img {
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.about-tab-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+/* ── Glass Caption Box ── */
+.about-image-caption {
+    position: absolute;
+    bottom: 34px;
+    left: 24px;
+    width: 310px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.caption-arrows {
+    font-size: 3.6rem;
+    color: #CC1C2A;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.about-image-caption p {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.5;
+    margin: 0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Accordion Tabs ── */
+.home-about-tabs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.home-about-tab {
+    border-bottom: 1.5px solid #e0e0e0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-about-tab:first-child {
+    border-top: 1.5px solid #e0e0e0;
+}
+
+.home-about-tab.active {
+    border-bottom: 2px solid #CC1C2A;
+}
+
+/* Tab header row */
+.tab-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0 12px;
+    user-select: none;
+}
+
+.tab-icon {
+    font-size: 1.3rem;
+    color: #aaa;
+    flex-shrink: 0;
+    transition: color 0.35s ease;
+}
+
+.home-about-tab.active .tab-icon {
+    color: #CC1C2A;
+}
+
+.tab-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.4;
+    transition: color 0.35s ease, font-weight 0.2s ease;
+}
+
+.home-about-tab.active .tab-title {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+/* ── Smooth Accordion Body using grid trick ── */
+.tab-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:
+        grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.tab-body > p {
+    overflow: hidden;
+    min-height: 0;
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+    padding-left: 36px;
+    padding-bottom: 0;
+    transition: padding-bottom 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-about-tab.active .tab-body {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.home-about-tab.active .tab-body > p {
+    padding-bottom: 16px;
+}
