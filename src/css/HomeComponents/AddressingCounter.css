@@ -142,6 +142,19 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+  .counter-con {
+    padding: 60px 20px;
+  }
+  .counter-wrapper {
+    padding: 0;
+    gap: 40px;
+  }
+  .counter-title {
+    font-size: 2.2rem;
+  }
+  .counter-number {
+    font-size: 3.2rem;
+  }
   .counter-top-row,
   .counter-bottom-row {
     flex-direction: column;

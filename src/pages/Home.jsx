@@ -1,13 +1,26 @@
 import React from "react";
 import LogoCarousel from "../components/HomeComponents/LogoCarousel";
+import HomeBanner from "../components/HomeComponents/HomeBanner";
 import AboutComp from "../components/HomeComponents/AboutComp";
 import AddressingCounter from "../components/HomeComponents/AddressingCounter";
 import DigitalTrans from "../components/HomeComponents/DigitalTrans";
 import Enterprise from "../components/HomeComponents/Enterprise";
 import Fusion from "../components/HomeComponents/Fusion";
+import SapAi from "../components/HomeComponents/SapAi";
 import CoreFounders from "../components/HomeComponents/CoreFounders";
+import Corporate from "../components/HomeComponents/Corporate";
+import Testimonials from "../components/HomeComponents/Testimonials";
+import Cta from "../components/Cta";
 
-// Assets
+
+import img1 from "../assets/logo.avif";
+import img2 from "../assets/logo.avif";
+import img3 from "../assets/logo.avif";
+import img4 from "../assets/logo.avif";
+import img6 from "../assets/logo.avif";
+import img9 from "../assets/logo.avif";
+
+
 import digitalVideo from "../assets/Home/digital.mp4";
 
 // Lucide Icons
@@ -92,7 +105,10 @@ const Home = () => {
 
   return (
     <main>
-      <LogoCarousel />
+      <HomeBanner />
+      <LogoCarousel title={<>Co-Innovative <br /> Partnerships</>}
+      partnersImages={[img1, img2, img3, img4, img9, img6]}
+       />
       <AboutComp />
       <AddressingCounter />
       <DigitalTrans
@@ -115,7 +131,16 @@ const Home = () => {
         mediaSrc={digitalVideo}
       />
       <Fusion />
+      <SapAi />
       <CoreFounders />
+      <Corporate />
+      <Testimonials />
+      <Cta
+        title={<>Transform Your SAP<br/> Support into an Intelligent System</>}
+        desc="Let's Engineer Your Next-Stage Growth."
+        ctatext="Talk to Experts"
+      />
+
     </main>
   );
 };

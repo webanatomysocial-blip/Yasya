@@ -33,7 +33,7 @@ const Fusion = () => {
         <div className="fusion-top-row">
           <div className="fusion-heading-box">
             <div className="fusion-subtitle-box">
-              <p className="sub-para-text">FUSION LM</p>
+              <p className="sub-para-text"><span className="leadership-blue-square"></span>FUSION LM</p>
             </div>
 
             <h1 className="head-text">

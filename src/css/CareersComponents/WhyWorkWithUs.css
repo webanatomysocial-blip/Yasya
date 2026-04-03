@@ -1,0 +1,94 @@
+.wwwu-con {
+  padding: 100px;
+  background-color: #ffffff;
+}
+
+/* ── Top row: heading left, text right ── */
+.wwwu-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.wwwu-top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.wwwu-top-right {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+/* ── 3×2 card grid ── */
+.wwwu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 50px;
+}
+
+/* ── Individual card ── */
+.wwwu-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Red circular icon badge */
+.wwwu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #B51B20;
+  color: #ffffff;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.wwwu-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.wwwu-card-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .wwwu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wwwu-top-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .wwwu-top-right {
+    max-width: 100%;
+  }
+  .wwwu-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .wwwu-con {
+    padding: 60px 20px;
+  }
+}

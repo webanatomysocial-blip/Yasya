@@ -47,7 +47,7 @@ const AboutComp = () => {
   return (
     <div className="home-about-con">
       <div className="home-about-left-con">
-        <h2 className='sub-para-text'>ABOUT US</h2>
+        <h2 className='sub-para-text'><span className="leadership-blue-square"></span>ABOUT US</h2>
         <h1 className='sub-head-text'>Enterprise ERP Transformation services</h1>
         <div className="home-about-buttons">
           <Link to="#" className='red-bg-btn'>

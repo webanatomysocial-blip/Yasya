@@ -55,27 +55,19 @@
 .fusion-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0px; 
+  gap: 20px; 
 }
 
 .fusion-card {
   background-color: #fff;
-  border: 1px solid #e5e5e5;
-  padding: 60px 50px;
+  border: 1px solid #000000;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  transition: all 0.3s ease;
 }
 
-/* Creating the continuous border look from screenshot */
-.fusion-card:nth-child(1) { border-right: none; border-bottom: none; }
-.fusion-card:nth-child(2) { border-bottom: none; }
-.fusion-card:nth-child(3) { border-right: none; }
 
-.fusion-card:hover {
-  background-color: #fafafa;
-}
 
 .fusion-card-icon-box {
   width: 44px;
@@ -110,13 +102,16 @@
 
 @media (max-width: 768px) {
   .fusion-con {
-    padding: 60px 40px;
+    padding: 60px 20px;
   }
   .fusion-grid {
     grid-template-columns: 1fr;
   }
   .fusion-card {
-    padding: 40px 30px;
+    padding: 30px 20px;
     border: 1px solid #e5e5e5 !important; 
+  }
+  .fusion-card-title {
+    font-size: 1.25rem;
   }
 }

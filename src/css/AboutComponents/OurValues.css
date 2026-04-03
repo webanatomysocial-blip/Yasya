@@ -1,0 +1,135 @@
+/* src/css/AboutComponents/OurValues.css */
+
+.our-values-con {
+    width: 100%;
+    padding: 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+}
+
+/* 1. Header Section */
+.values-header-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.values-header-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.our-val-left-con {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.our-val-right-con {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.values-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.values-subtitle {
+    font-size: 1.15rem;
+    color: #4a4a4a;
+    max-width: 350px;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+.values-hero-image {
+    width: 100%;
+    height: 480px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.values-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. Grid System */
+.vision-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.core-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .our-values-con {
+        padding: 80px 5%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .values-title {
+        font-size: 2.8rem;
+    }
+    
+    .core-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-values-con {
+        padding: 60px 20px;
+    }
+    .values-header-text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .values-title {
+        font-size: 2.2rem;
+    }
+    
+    .our-val-right-con {
+        justify-content: flex-start;
+    }
+    
+    .values-subtitle {
+        max-width: 100%;
+    }
+    
+    .values-hero-image {
+        height: 300px;
+    }
+    
+    .vision-mission-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Optional: 1 col on very small screens for the 4 core values */
+    .core-values-grid {
+        grid-template-columns: 1fr;
+    }
+}

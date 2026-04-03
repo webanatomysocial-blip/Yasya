@@ -1,0 +1,128 @@
+.contact-details-container {
+  padding: 100px;
+  background-color: #f9f9fa; /* Matches standard light backgrounds in Yasya */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: inherit;
+}
+
+.cd-header-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.cd-blue-tag {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.cd-blue-square {
+  width: 8px;
+  height: 8px;
+  background-color: #281BCE;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.cd-main-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: center;
+}
+
+.cd-content {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.cd-locations-section {
+  margin-bottom: 50px;
+}
+
+.cd-red-tag {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.cd-red-square {
+  width: 8px;
+  height: 8px;
+  background-color: #B51B20;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.cd-address-text {
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.cd-address-text:last-child {
+  margin-bottom: 0;
+}
+
+.cd-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.cd-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.cd-info-heading {
+  color: #B51B20;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.cd-info-detail {
+  font-size: 14px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.cd-info-detail strong {
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .contact-details-container {
+    padding: 60px 20px;
+  }
+  .cd-info-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cd-main-title {
+    font-size: 32px;
+  }
+}

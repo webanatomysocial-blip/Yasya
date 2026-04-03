@@ -26,33 +26,35 @@
 /* ── Right-side Image Panel ── */
 .home-about-right-con {
     width: 50%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-areas: "stack";
     align-items: stretch;
-    position: relative; /* containing block for absolute children */
+    position: relative;
     min-height: 460px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .about-image-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
+    grid-area: stack;
     width: 100%;
     height: 100%;
-    border-radius: 6px;
-    overflow: hidden;
     opacity: 0;
-    transition: opacity 0.6s ease-in-out;
+    visibility: hidden;
+    transform: scale(1.05); /* Start slightly larger for a zoom-in effect */
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                visibility 0.8s, 
+                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
-    pointer-events: none; /* prevent invisible ones from blocking clicks */
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-/* The active one becomes relative to push the container's height naturally */
 .about-image-wrap.active-img {
-    position: relative;
     opacity: 1;
+    visibility: visible;
+    transform: scale(1); /* Shrink to normal size when active */
     z-index: 2;
-    pointer-events: auto;
 }
 
 .about-tab-image {
@@ -60,7 +62,12 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 6px;
+    border-radius: 12px;
+    transition: transform 6s linear; /* Very slow steady zoom on the active image */
+}
+
+.about-image-wrap.active-img .about-tab-image {
+    transform: scale(1.1);
 }
 
 /* ── Glass Caption Box ── */
@@ -182,4 +189,23 @@
 
 .home-about-tab.active .tab-body > p {
     padding-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+    .home-about-con {
+        padding: 60px 20px;
+        flex-direction: column;
+    }
+    .home-about-left-con, .home-about-right-con {
+        width: 100%;
+    }
+    .home-about-buttons{
+        gap: 40px;
+    }
+    .about-image-wrap{
+        height: 400px;
+    }
+    .about-image-caption{
+        left: 15px;
+    }
 }

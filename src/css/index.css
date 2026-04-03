@@ -6,7 +6,7 @@
   --secondary-color: black;
   --Yellow-color: #ffdd00;
   --blue: #0033bf;
-  --red:#B51B20;
+  --red: #B51B20;
   --grey: #f5f5f5;
   --overlay-bg: rgba(0, 0, 0, 0.5);
   --overlay-cta-bg: rgba(0, 0, 0, 0.3);
@@ -48,7 +48,8 @@ h6 {
   line-height: 1.2em;
   letter-spacing: 0px;
   font-family: "Inter", sans-serif;
-  font-weight: 700; /* Bold headings by default per design */
+  font-weight: 700;
+  /* Bold headings by default per design */
 }
 
 .big-text-head {
@@ -58,6 +59,7 @@ h6 {
   line-height: 1.4em;
   font-family: "Inter", sans-serif;
 }
+
 .big-text-head-white {
   font-size: 60px !important;
   font-weight: 600;
@@ -103,10 +105,12 @@ h6 {
 /* Paragraphs: 16px */
 .para-text {
   font-size: 16px;
-  font-family: "Inter", sans-serif; /* Adjusted to Inter to match screenshots */
+  font-family: "Inter", sans-serif;
+  /* Adjusted to Inter to match screenshots */
   font-weight: 400;
   line-height: 1.6em;
-  color: #333; /* Darker than gray for readability */
+  color: #333;
+  /* Darker than gray for readability */
 }
 
 .para-text-white {
@@ -124,6 +128,19 @@ h6 {
   line-height: 1.6em;
   color: #666;
   padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Global blue square accent — used beside sub-para-text labels */
+.leadership-blue-square {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  background-color: #281BCE;
+  border-radius: 2px;
 }
 
 .sub-para-text-white {
@@ -139,7 +156,7 @@ h6 {
 
 /* buttons start  */
 
-.red-bg-btn{
+.red-bg-btn {
   background-color: var(--red);
   color: var(--primary-color);
   padding: 20px;
@@ -163,7 +180,7 @@ h6 {
 .black-bg-btn {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding:19px;
+  padding: 19px;
   text-decoration: none;
   border: 2px solid var(--secondary-color);
   cursor: pointer;
@@ -181,9 +198,11 @@ h6 {
   /* Remove or animate in later */
   z-index: 10;
 }
+
 .arrow-icon {
   transition: all 0.3s ease-in-out;
 }
+
 .black-bg-btn:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -257,6 +276,10 @@ h6 {
 
 /* buttons End */
 
+main {
+  overflow: visible;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -272,6 +295,22 @@ body {
   body {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  .red-bg-btn {
+    padding: 10px;
+    gap: 5px;
+    font-size: 14px;
+  }
+  .black-bg-btn {
+    padding: 10px;
+    gap: 5px;
+    font-size: 14px;
+  }
+  .banner-outline-btn {
+    padding: 10px;
+    gap: 5px;
+    font-size: 14px;
   }
 
   /* Mobile Typography Overrides */

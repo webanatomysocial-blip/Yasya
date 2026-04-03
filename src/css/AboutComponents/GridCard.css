@@ -1,0 +1,72 @@
+.yasya-grid-card {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    gap: 15px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px; /* Default very slight rounding */
+}
+
+
+
+.grid-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.grid-card-index {
+    color: var(--yasya-blue, #0033bf);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.grid-card-icon-container {
+    width: 45px;
+    height: 45px;
+    background-color: #281BCE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+}
+
+.grid-card-icon-container svg {
+    width: 24px;
+    height: 24px;
+}
+
+.grid-card-title {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.grid-card-desc {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .yasya-grid-card {
+        padding: 25px;
+        min-height: auto !important; /* Allow collapse on mobile */
+    }
+    .grid-card-title {
+        font-size: 1.15rem;
+    }
+    .grid-card-index {
+        font-size: 1.25rem;
+    }
+}

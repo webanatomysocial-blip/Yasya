@@ -485,11 +485,11 @@
 @media (max-width: 900px) {
   .pod-container.three-column-layout {
     grid-template-columns: 1fr; /* Stack everything on mobile */
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
   .pod-container.two-column-layout {
     grid-template-columns: 1fr;
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
   .pod-body h2 {
     font-size: 24px;

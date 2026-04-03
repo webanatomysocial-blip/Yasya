@@ -1,0 +1,119 @@
+.op-con {
+  padding: 100px;
+  background-color: #ffffff;
+}
+
+/* ── Top row: heading left, text right ── */
+.op-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.op-top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.op-top-right {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.op-highlight-red {
+  color: #B51B20;
+  font-weight: 600;
+}
+
+.op-highlight-blue {
+  color: #281BCE;
+  font-weight: 600;
+}
+
+/* ── Grouped sections ── */
+.op-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.op-group {
+  border-top: 1px solid #e5e7eb;
+  padding: 32px 0 8px 0;
+}
+
+.op-category {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Individual role row ── */
+.op-roles {
+  display: flex;
+  flex-direction: column;
+}
+
+.op-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.op-row:hover {
+  background-color: #fafafa;
+}
+
+.op-role-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.op-apply-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #B51B20;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.op-apply-btn:hover {
+  gap: 14px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .op-top-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .op-top-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .op-con {
+    padding: 60px 20px;
+  }
+  .op-role-title {
+    font-size: 0.9rem;
+  }
+}

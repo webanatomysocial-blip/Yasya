@@ -1,0 +1,128 @@
+.feature-section {
+    padding: 100px;
+    background-color: #ffffff;
+}
+
+.feature-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.feature-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card-wrapper {
+    background: linear-gradient(135deg, #fef2f200 0%, #B51B2011 100%);
+    border: 1px solid #B51B2022;
+    border-radius: 30px;
+    padding: 60px;
+    box-shadow: 0 10px 40px -10px rgba(181, 27, 32, 0.05);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.feature-column {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+.feature-column-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.feature-icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: #B51B20;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.feature-column-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.feature-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    color: #374151;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.feature-check-icon {
+    margin-top: 4px;
+    font-size: 1.1rem;
+    color: #B51B20;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+    .feature-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .feature-section {
+        padding: 80px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-section {
+        padding: 60px 20px;
+    }
+
+    .feature-card-wrapper {
+        padding: 40px 20px;
+    }
+
+    .feature-column-title {
+        font-size: 1.2rem;
+    }
+
+    .feature-list-item {
+        font-size: 0.95rem;
+    }
+    .feature-header{
+        margin: 1.5rem;
+    }
+}

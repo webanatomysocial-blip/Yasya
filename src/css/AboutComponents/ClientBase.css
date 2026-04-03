@@ -1,0 +1,75 @@
+.client-base-con {
+  padding: 100px;
+  background-color: #ffffff;
+}
+
+.client-base-headings-con {
+  margin-bottom: 1rem;
+}
+
+.cb-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cb-card {
+  border-left: 3px solid #3b429f;
+  padding:30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Top row: icon badge + title */
+.cb-card-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Red square icon badge */
+.cb-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: #c82c2c;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.cb-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cb-card-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .cb-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .cb-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .client-base-con {
+    padding: 60px 20px;
+  }
+  .cb-card {
+    padding: 2rem 1.5rem;
+  }
+}

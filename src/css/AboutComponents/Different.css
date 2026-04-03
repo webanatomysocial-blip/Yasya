@@ -1,0 +1,84 @@
+.diff-con {
+  padding: 100px;
+  background-color: #ffffff;
+}
+
+.diff-headings-con {
+  margin-bottom: 3rem;
+}
+
+
+
+
+.diff-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid #e5e7eb;
+  border-left: 1px solid #e5e7eb;
+}
+
+.diff-card {
+  padding: 3rem 2rem;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.diff-card-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.diff-card-pipe {
+  width: 3px;
+  height: 24px;
+  background-color: #3b429f;
+}
+
+.diff-card-num {
+  font-size: 1.5rem;
+  color: #3b429f;
+  font-weight: 500;
+}
+
+.diff-card-heading {
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  margin: 0;
+}
+
+.diff-card-body p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Background color classes */
+.diff-bg-cyan {
+  background-color: #f3faff;
+}
+
+.diff-bg-pink {
+  background-color: #fbf0f0;
+}
+
+@media (max-width: 900px) {
+  .diff-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .diff-con {
+    padding: 60px 20px;
+  }
+
+  .diff-card {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,51 @@
+.about-banner-con {
+    height: 85vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 100px;
+    position: relative;
+    align-items: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark gradient for strong text contrast */
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.about-banner-contents {
+    position: relative;
+    z-index: 2; /* Sits above the overlay */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+    max-width: 1000px;
+}
+
+
+/* Responsiveness for About Banner */
+@media (max-width: 1024px) {
+    .head-text {
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 768px) {
+    .about-banner-con {
+        padding: 120px 20px 60px 20px;
+    }
+    .head-text {
+        font-size: 2.2rem;
+    }
+    .about-banner-contents {
+        width: 100%;
+    }
+}

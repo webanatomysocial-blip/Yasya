@@ -122,12 +122,20 @@
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
+  .digital-con {
+    padding: 60px 20px;
+  }
+  .digital-head-text {
+    font-size: 2.2rem;
+  }
   .digital-content-con {
     flex-direction: column;
     gap: 40px;
+    padding: 0;
   }
   .digital-video-con, .digital-cards-con {
     width: 100%;
+    padding-bottom: 0vh;
   }
   .video-sticky-wrapper, .digital-card {
     position: relative; /* Disable sticky stacking on mobile to avoid overlapping issues */

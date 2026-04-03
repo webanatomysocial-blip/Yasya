@@ -1,0 +1,33 @@
+.join-us-con{
+    padding: 100px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.join-left-con{
+    width: 50%;
+    border-radius: 15px;
+}
+.join-left-con img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.join-right-con{
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .join-us-con{
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+    .join-left-con{
+        width: 100%;
+    }
+    .join-right-con{
+        width: 100%;
+    }
+}

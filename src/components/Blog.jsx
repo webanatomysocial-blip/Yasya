@@ -1,8 +1,7 @@
-
-
 import React, { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { blogMetadata } from '../blogs/metadata.js';
+import { FiArrowUpRight } from 'react-icons/fi';
 import '../css/Blog.css';
 
 // Dynamically import all JSX files from blogs folder
@@ -18,34 +17,21 @@ const sortedBlogKeys = blogKeys.sort((a, b) => {
   return new Date(metadataB.date) - new Date(metadataA.date);
 });
 
-const Blogs = ({ backgroundColor, limit = 3 }) => {
-  // Log props for debugging
-  console.log('Blogs component props:', { backgroundColor, limit });
-
+const Blogs = ({ backgroundColor, limit = 6 }) => {
   const totalBlogs = sortedBlogKeys.length;
-  // Determine initial number of blogs to show: all for 'all', otherwise use limit
   const initialVisible = limit === 'all' ? totalBlogs : Math.min(limit, totalBlogs);
   const [visibleCount, setVisibleCount] = useState(initialVisible);
 
-  // Log sortedBlogKeys for debugging
-  console.log('Sorted blog keys:', sortedBlogKeys);
-
-  // Preload blog components and images
   useEffect(() => {
     sortedBlogKeys.slice(0, visibleCount).forEach(key => {
-      // Preload blog module
       blogModules[key]().catch(error => {
         console.error(`Error preloading blog ${key}:`, error);
       });
-      // Preload image
       const blogName = key.split('/').pop().replace('.jsx', '');
       const metadata = blogMetadata.find(blog => blog.id === blogName);
       if (metadata?.image) {
         const img = new Image();
         img.src = metadata.image;
-        img.onerror = () => {
-          console.error(`Failed to preload image: ${metadata.image}`);
-        };
       }
     });
   }, [visibleCount]);
@@ -58,13 +44,24 @@ const Blogs = ({ backgroundColor, limit = 3 }) => {
     }, 0);
   };
 
-  // Only show "Load More" if limit='all' and there are more blogs to load
   const showLoadMore = limit === 'all' && visibleCount < totalBlogs;
+
+  const formatDate = (dateString) => {
+    if (!dateString || dateString === 'No date') return null;
+    const dateObj = new Date(dateString);
+    const month = dateObj.toLocaleString('default', { month: 'short' });
+    const dayYear = `${dateObj.getDate()}, ${dateObj.getFullYear()}`;
+    return (
+      <div className="new-date">
+        <span className="new-date-month">{month}</span>{" "} {dayYear}
+      </div>
+    );
+  };
 
   return (
     <div className="whole-blog-section" style={{ backgroundColor }}>
       <div className="blogs-container">
-        <div className="blogs-grid">
+        <div className="new-blogs-grid">
           {sortedBlogKeys.length === 0 && <p>No blogs found.</p>}
           {sortedBlogKeys.slice(0, visibleCount).map((key, index) => {
             const blogName = key.split('/').pop().replace('.jsx', '');
@@ -75,35 +72,26 @@ const Blogs = ({ backgroundColor, limit = 3 }) => {
               image: '/images/placeholder.jpg',
               date: 'No date',
             };
-            // Log each blog's metadata for debugging
-            console.log(`Blog: ${blogName}, URL: /blogs/${blogName}, Metadata:`, metadata);
+
             return (
-              <div key={index} className="inner-news-blogs-container">
-                <Suspense fallback={<BlogCardSkeleton />}>
-                  <div className="blog-text">
-                    <p className="text-black">BLOG</p>
-                    <Link to={`/blogs/${blogName}`} style={{ textDecoration: 'none' }}>
-                      <p className="sub-big-heading-text-black">{metadata.title}</p>
-                    </Link>
+              <Suspense fallback={<div className="new-blog-skeleton"></div>} key={index}>
+                <Link to={`/blogs/${blogName}`} className="new-blog-card">
+                  <div 
+                    className="new-blog-bg" 
+                    style={{ backgroundImage: `url(${metadata.image})` }}
+                  ></div>
+                  <div className="new-blog-overlay"></div>
+                  
+                  <div className="new-blog-arrow arrow-white">
+                    <FiArrowUpRight size={20} />
                   </div>
-                  <div className="image-hover-text-come" style={{ backgroundImage: `url(${metadata.image})` }}>
-                    <div className="inner-text-come">
-                      <div>
-                        <Link to={`/blogs/${blogName}`} style={{ textDecoration: 'none' }}>
-                          <p className="small-text-black">{metadata.excerpt}</p>
-                        </Link>
-                      </div>
-                      <Link
-                        to={`/blogs/${blogName}`}
-                        className="read-more-btn-blue"
-                        aria-label={`Read more about ${metadata.title}`}
-                      >
-                        Read More <i className="bi bi-arrow-right arrow-icon"></i>
-                      </Link>
-                    </div>
+
+                  <div className="new-blog-content">
+                    {formatDate(metadata.date)}
+                    <h3 className="new-title">{metadata.title}</h3>
                   </div>
-                </Suspense>
-              </div>
+                </Link>
+              </Suspense>
             );
           })}
         </div>
@@ -116,24 +104,5 @@ const Blogs = ({ backgroundColor, limit = 3 }) => {
     </div>
   );
 };
-
-// Skeleton loader for blog cards
-const BlogCardSkeleton = () => (
-  <div className="inner-news-blogs-container">
-    <div className="blog-text">
-      <div className="skeleton-title"></div>
-      <div className="skeleton-title"></div>
-    </div>
-    <div className="image-hover-text-come">
-      <div className="inner-text-come">
-        <div>
-          <div className="skeleton-title"></div>
-          <div className="skeleton-excerpt"></div>
-        </div>
-        <div className="skeleton-link"></div>
-      </div>
-    </div>
-  </div>
-);
 
 export default Blogs;

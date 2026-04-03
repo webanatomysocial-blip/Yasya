@@ -94,7 +94,7 @@ const Enterprise = () => {
           </div>
       </div>
       <EnterpriseCards />
-      <p className='sub-para-text' style={{textAlign:"center", marginTop:"-70px"}}>Six specialized service lines. One unified delivery philosophy.  YASYA brings structured, <br/>leadership-driven SAP transformation across the enterprise lifecycle.</p>
+     
     </>
   )
 }

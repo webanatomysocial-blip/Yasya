@@ -1,0 +1,130 @@
+.shift-section {
+    padding: 100px;
+    background-color: #ffffff;
+}
+
+.shift-container {
+    margin: 0 auto;
+}
+
+.shift-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shift-italic-title {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.shift-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shift-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.shift-card {
+    flex: 1;
+    padding: 30px 40px;
+    background-color: #fbfbfc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+}
+
+.shift-card.before {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.shift-card.after {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.shift-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.shift-arrow-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.shift-arrow-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #B51B20;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.shift-arrow-icon {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .shift-section {
+        padding: 80px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shift-section {
+        padding: 60px 20px;
+    }
+
+    .shift-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .shift-card {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .shift-card.before {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .shift-arrow-box {
+        transform: rotate(90deg);
+        margin: 5px 0;
+    }
+
+    .shift-italic-title {
+        font-size: 1rem;
+    }
+    .shift-card.after{
+        text-align: center;
+    }
+}

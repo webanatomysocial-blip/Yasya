@@ -1,0 +1,115 @@
+.spectrum-section {
+    padding: 100px;
+    background-color: #ffffff;
+}
+
+.spectrum-container {
+    margin: 0 auto;
+}
+
+.spectrum-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spectrum-card-wrapper {
+        background: linear-gradient(135deg, #fef2f200 0%, #B51B2011 100%);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.05);
+}
+.spectrum-column:nth-child(even) {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.spectrum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.spectrum-column-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.spectrum-icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: #B51B20;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.spectrum-column-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.spectrum-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.spectrum-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1.1rem;
+    color: #374151;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.spectrum-check-icon {
+    margin-top: 3px;
+    font-size: 1.2rem;
+    color: #B51B20;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1100px) {
+    .spectrum-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .spectrum-section {
+        padding: 60px 20px;
+    }
+
+    .spectrum-card-wrapper {
+        padding: 30px 20px;
+    }
+
+    .spectrum-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .spectrum-column-title {
+        font-size: 1.25rem;
+    }
+
+    .spectrum-list-item {
+        font-size: 1rem;
+    }
+}

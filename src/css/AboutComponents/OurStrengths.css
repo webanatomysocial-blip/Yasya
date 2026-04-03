@@ -1,0 +1,124 @@
+.strengths-con {
+  padding: 100px;
+  background-color: #ffffff;
+}
+
+.strengths-headings-con {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.strengths-left-headings{
+  width: 50%;
+}
+.strengths-right-headings{
+  width: 50%;
+}
+
+.strengths-headings-center {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.strengths-headings-center .strengths-left-headings,
+.strengths-headings-center .strengths-right-headings {
+  width: 100%;
+}
+.strengths-sub-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.strengths-blue-square {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #3b429f;
+}
+
+.strengths-head-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.strengths-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Override GridCard styles for this section to match layout */
+.strengths-con .yasya-grid-card {
+    padding: 2.5rem 2rem;
+    background-color: #fbfbfc !important;
+}
+
+.strengths-con .grid-card-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid #3b429f;
+    border-radius: 50%;
+    font-size: 0.95rem;
+    color: #3b429f;
+    font-weight: 600;
+    margin-right: -5px;
+}
+
+.strengths-con .grid-card-header {
+    gap: 15px;
+    align-items: center;
+}
+
+.strengths-con .grid-card-title {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.strengths-con .grid-card-desc {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .strengths-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .strengths-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .strengths-con {
+    padding: 60px 20px;
+  }
+  .strengths-left-headings{
+    gap: 30px;
+  width: 100%;
+}
+.strengths-right-headings{
+  width: 100%;
+}
+.strengths-headings-con {
+  flex-direction: column;
+  gap: 20px;
+}
+}
