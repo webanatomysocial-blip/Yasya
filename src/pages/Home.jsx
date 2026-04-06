@@ -14,12 +14,12 @@ import Cta from "../components/Cta";
 
 
 import img1 from "../assets/logo.avif";
-import img2 from "../assets/logo.avif";
-import img3 from "../assets/logo.avif";
-import img4 from "../assets/logo.avif";
-import img6 from "../assets/logo.avif";
-import img9 from "../assets/logo.avif";
-
+import img2 from "../assets/Home/1.avif";
+import img3 from "../assets/Home/2.avif";
+import img4 from "../assets/Home/3.avif";
+import img6 from "../assets/Home/4.avif";
+import img9 from "../assets/Home/5.avif";
+import yasmyra from "../assets/Home/yasmyra.png";
 
 import digitalVideo from "../assets/Home/digital.mp4";
 
@@ -127,8 +127,8 @@ const Home = () => {
           <br />
           <br />
           Re-imagining SAP Application Management Services through intelligent automation, predictive diagnostics, and low-dependency operational models.</>}
-        mediaType="video"
-        mediaSrc={digitalVideo}
+        mediaType="image"
+        mediaSrc={yasmyra}
       />
       <Fusion />
       <SapAi />

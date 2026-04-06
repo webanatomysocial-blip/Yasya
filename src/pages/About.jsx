@@ -9,7 +9,8 @@ import ClientBase from '../components/AboutComponents/ClientBase'
 import LeadershipJourney from '../components/AboutComponents/LeadershipJourney'
 import Cta from '../components/Cta'
 import CounterComp from '../components/AboutComponents/CounterComp'
-import yourNewImage from '../assets/About/banner.avif';
+import AboutBannerImg from '../assets/About/AboutBannerImg.jpg';
+import ourstory from '../assets/About/ourstory.avif';
 
 const About = () => {
   const journeyData = [
@@ -66,9 +67,9 @@ const About = () => {
   return (
     <>
       <div className="about-page-container">
-        <AboutBanner bgImage={yourNewImage} />
+        <AboutBanner bgImage={AboutBannerImg} />
         <OurStory
-                  img={yourNewImage}
+                  img={ourstory}
                   subtitle="ABOUT US"
                   title="Our Story"
                   desc={<>YASYA Technologies is a global SAP and digital transformation partner headquartered in Singapore (68 Circular Road, #02-01), with delivery operations in Hyderabad, India.

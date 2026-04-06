@@ -1,6 +1,6 @@
 import React from 'react';
 import GridCard from './GridCard';
-import img from '../../assets/About/banner.avif'; // Update to the correct image later
+import visionmission from '../../assets/About/Visionmission.avif'; // Update to the correct image later
 import '../../css/AboutComponents/OurValues.css';
 
 const OurValues = () => {
@@ -68,7 +68,7 @@ const OurValues = () => {
         </div>
         
         <div className="values-hero-image">
-            <img src={img} alt="Yasya Core Values" />
+            <img src={visionmission} alt="Yasya Core Values" />
         </div>
       </div>
 

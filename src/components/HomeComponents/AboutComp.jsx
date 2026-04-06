@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import { TbChartBar } from 'react-icons/tb'
 import { MdOutlinePublic, MdOutlineDescription, MdOutlineAdminPanelSettings } from 'react-icons/md'
 import Tab1 from '../../assets/Home/Tab1.avif'
+import Tab2 from '../../assets/Home/Tab2.jpg'
+import Tab3 from '../../assets/Home/Tab3.jpg'
+import Tab4 from '../../assets/Home/Tab4.webp'
 
 const tabs = [
   {
@@ -18,21 +21,21 @@ const tabs = [
     icon: MdOutlinePublic,
     title: 'Innovative, Future-Ready Approach',
     description: 'Global Capability Center in Bangalore with 24rchitects dedicated to new dimensional SAP products. Technology collaboration with RV Universit',
-    image: Tab1,
+    image: Tab2,
     caption: 'Smart plans, expert advice, growth with momentum',
   },
   {
     icon: MdOutlineDescription,
     title: 'Proven Industry Expertise',
     description: '40% Technical crew for new dimensions, 50% Functional experts, plus 7 Industry SMEs leading our COE team.',
-    image: Tab1,
+    image: Tab3,
     caption: 'Lean financial tactics designed for maximum ROI.',
   },
   {
     icon: MdOutlineAdminPanelSettings,
     title: 'Scalable & Adaptive Systems',
     description: 'Technology-agnostic organisation. Active vendor for multinational companies. Zero debt, stable delivery partner.',
-    image: Tab1,
+    image: Tab4,
     caption: 'Scale wealth with disciplined plans & advisor expertise.',
   },
 ]

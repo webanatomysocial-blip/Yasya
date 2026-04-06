@@ -221,9 +221,7 @@
         color: #333;
     }
 
-    .header-mobile-left,
-    .header-mobile-right {
-    }
+
 
     .header-mobile-left {
         display: flex;

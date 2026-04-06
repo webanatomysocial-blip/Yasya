@@ -1,12 +1,12 @@
 import React from 'react'
 import "../../css/CareersComponents/JoinUs.css"
-import img from "../../assets/Career/banner.avif"
+import joinus from "../../assets/Career/jointoday.svg"
 const JoinUs = () => {
   return (
     <>
     <div className="join-us-con">
       <div className="join-left-con">
-        <img src={img} alt="" />
+        <img src={joinus} alt="" />
       </div>
       <div className="join-right-con">
         <h1 className='sub-para-text'>
