@@ -39,8 +39,8 @@ const Footer = () => {
           </p>
           
           <h4 className="footer-locations-title">Locations :</h4>
-          <p className="footer-location">YASYA Technologies Pte Ltd \u2013 Singapore</p>
-          <p className="footer-location">YASYA Infotech LLP \u2013 Hyderabad, India</p>
+          <p className="footer-location">YASYA Technologies Pte Ltd 2013 Singapore</p>
+          <p className="footer-location">YASYA Infotech LLP 2013 Hyderabad, India</p>
 
           <div className="footer-socials">
             <a href="https://facebook.com" aria-label="Facebook" className="social-icon">
