@@ -32,15 +32,19 @@ const BlogLayout = ({ category, title, content, image, recentPosts }) => {
   return (
     <>
       <div className="pod-post-page">
-        {/* Hero Section */}
-        <div className="pod-hero-section">
-          <div className="pod-split-header">
-            <div className="pod-title-section">
-              <h1 className="head-text">{title}</h1>
-            </div>
-            <div className="pod-hero-img-container">
-              <img src={image} alt={title} />
-            </div>
+        {/* Hero Section - Full Width Banner Style */}
+        <div 
+          className="blog-hero-banner" 
+          style={{ backgroundImage: `url(${image})` }}
+        >
+          <div className="blog-banner-overlay"></div>
+          <div className="blog-banner-content">
+            <p className="sub-para-text-white" style={{ opacity: 0.9, letterSpacing: '2px', marginBottom: '20px' }}>
+              {category}
+            </p>
+            <h1 className="head-text-white">
+              {title}
+            </h1>
           </div>
         </div>
 
@@ -49,8 +53,6 @@ const BlogLayout = ({ category, title, content, image, recentPosts }) => {
           <div className="pod-sticky-header">
             <div className="pod-header-content">
               <div className="pod-header-title">
-                {category}{" "}
-                <span style={{ margin: "0 10px", color: "#ccc" }}>|</span>{" "}
                 {title}
               </div>
               <div className="pod-header-actions">
@@ -64,7 +66,7 @@ const BlogLayout = ({ category, title, content, image, recentPosts }) => {
                     aria-label="Share on Facebook"
                     className="social-link-header"
                   >
-                    <FiFacebook size={24} />
+                    <FiFacebook size={20} />
                   </a>
                   <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
@@ -75,7 +77,7 @@ const BlogLayout = ({ category, title, content, image, recentPosts }) => {
                     aria-label="Share on LinkedIn"
                     className="social-link-header"
                   >
-                    <FiLinkedin size={24} />
+                    <FiLinkedin size={20} />
                   </a>
                 </div>
               </div>
@@ -109,7 +111,7 @@ const BlogLayout = ({ category, title, content, image, recentPosts }) => {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

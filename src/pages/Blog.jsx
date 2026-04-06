@@ -7,13 +7,13 @@ const Blog = () => {
   return (
     <>
       <AboutBanner
-        subtitle="Our Blogs"
-        title="Insights That Drive Impact"
-        desc="Lorem Ipsum dior salut asdfc afnc"
+        subtitle="OUR BLOG"
+        title="Insights From the Vanguard of Digital Transformation."
+        desc="Expert perspectives on SAP innovation, intelligent automation, and the future of enterprise technology — delivered by leaders with 25+ years of hands-on experience."
         cta={false}
         bgImage={yourNewImage}
       />
-      <div style={{ padding: '40px 0' }}>
+      <div className="blog-list-wrapper">
         <Blogs limit="all" backgroundColor="transparent" />
       </div>
     </>
